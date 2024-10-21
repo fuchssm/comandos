@@ -1,0 +1,61 @@
+CREATE TABLE cadastro_produto(
+    id_produto int NOT NULL AUTO_INCREMENT,
+    problema_aparelho varchar(100)NOT NULL,
+    categoria_aparelho varchar(20),
+    versao_modelo varchar(20),
+    historico_aparelho varchar(100),
+    indetificacao_produto varchar(50) NOT NULL,
+    data_entrada_saida datetime NOT NULL,
+    hora_entrada_saida datetime NOT NULL,
+    tempo_garantia int NOT NULL,
+      ativo int NOT NULL
+  )ENGINE=MyISAM DEFAULT CHARSET=utf8;
+    
+    
+    tem_trincados varchar(20)NOT NULL,
+    tem_quebrados varchar(20) NOT NULL,
+    tem_adesivo varchar(20) NOT NULL,
+    tem_fita varchar(20)NOT NULL,
+    qual_cor varchar(15)NOT NULL,
+    cod_produto varchar(20)NOT NULL,
+      ativo int NOT NULL
+  )ENGINE=MyISAM DEFAULT CHARSET=utf8;
+    
+    
+    id_venda int NOT NULL,
+    data_hora_venda datetime NOT NULL,
+    id_vendedor varchar(10) NOT NULL,
+    valor_total int NOT NULL,
+    preco_pago int NOT NULL,
+    forma_pagamento varchar(10) NOT NULL,
+      ativo int NOT NULL
+  )ENGINE=MyISAM DEFAULT CHARSET=utf8;
+    
+    id_cliente int NOT NULL AUTO_INCREMENT,
+    nome_cliente varchar(50) NOT NULL,
+    endereco_cliente varchar(128),
+    cpf_cliete int NOT NULL,
+    telefone_1 int NOT NULL,
+    telefone_2 int,
+    email_cliente varchar(128)
+    ativo int NOT NULL
+  )ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE OS (
+    id_cliente int NOT NULL,
+    id_atendente int NOT NULL,
+    equipamento varchar(50),
+    n°_série varchar (35),
+    defeito varchar(100),
+    observação_pdt varchar (220),
+    diagnostico varchar (220),
+    entrada_aparelho datetime NOT NULL,
+    saída_aparelho datetime NOT NULL,
+    responsavel varchar (20) NOT NULL,
+    forma_pgto varchar(30)NOT NULL,
+    total_pago varchar (10) NOT NULL,
+    status_os varchar (10),
+    status_pgto varchar (30),
+     ativo int NOT NULL
+  )ENGINE=MyISAM DEFAULT CHARSET=utf8;
+    

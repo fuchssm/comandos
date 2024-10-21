@@ -1,0 +1,36 @@
+1 - primeiro comando
+
+   sudo apt udpate
+
+2 - segundo comando
+
+   sudo ap update
+
+3 - terceiro comando
+
+node - v
+npm - v 
+expo --version
+nvm -v
+
+####################
+ 
+1 - ver o diretório / pasta atual do terminal
+
+cd ..
+
+2 - comando para ver a proxima hierarquia de pasta
+
+ls
+
+ 3 - comando para acessar a próximo diretório / pasta
+
+cd ' nome do diretório ou pasta' 
+
+ 4 - acessando a Área de trabalho
+
+ cd Área de trabalho
+
+5 - comadndo pra voltar a pasta anterior
+
+cd ..

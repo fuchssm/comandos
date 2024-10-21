@@ -1,0 +1,173 @@
+01) ALTERAR O NOMDE DO CLIENTE para "Luis Felipe de souza", telefone "41 98855-1014" com id 6
+
+      UPDATE cliente set nome = "Noah Marins", telefone = "47992191769" where cod_cliente = 1
+
+02) ALTERAR TODOS OS DADOS (uf) de SC para MG
+
+      UPDATE cliente set uf = "MG" where
+
+03) ALTERAR PARA INATIVO todos os clientes do estado do PR
+
+      Update cliente set uf = NULL
+
+04) DEFINIR COMO INATIVO todos os clientes que não tenham CPF
+
+05) ALTERAR PARA CEP "83.880-000" todos os clientes residentes em Rio Negro
+
+06) MUDAR NOME DO PRODUTO  para "Mouse Gamer USB Logitech", preço da compra R$ 48,90 e preço de venda R$ 98,90 para id_produto = 7
+
+08) DEIXAR TODOS OS CAMPOS de telefone 2 como NULOS
+
+09)     HABILITAR CLIENTE com o cpf 012.023.044-55 e com nome "Maria Clara Pontes"
+
+10)     ADICONAR UM REGISTRO com os seguintes dados:
+        Nome: Juarez Lourenço Martins
+        CPF: 033.047.199-65
+        Endereço: Rua XV de Novembro, 542 - Centro - Rio Negro PR
+        Telefones: 47 98800-7788 e 47 99900-7799
+        E-mail: juarezposntes@terra.com.br
+        Ativo: Desabilitado
+
+INSERT INTO cadastro_cliente (`nome_cliente`,`endereco_cliente`,`cpf_cliente`,`telefone_1`,`telefone_2`,`email_cliente`,`ativo`) VALUES
+("Juarez Lourenço Martins","Rua XV de Novembro, 542 - Centro - Rio Negro PR","033.047.199-65","47 98800-7788","47 99900-7799","juarezposntes@terra.com.br",1)
+
+    select * from cliente where nome like %silva% ACHA NOMES QUE TENHAM NA FRENTE OU ATRAS O NOMES SILVA
+    select * from aluno where id_aluno IN (140,216,729)
+    select * from aluno where id_aluno= 140 and id_aluno = 216
+    select * from aluno where id_aluno > 15500 and data_matricula > "2020-01-01"
+    select * from aluno where cidade = " Florianopolis or cidade "São josé"
+    
+avg = utilizada para calcular a média dos valores de um campo = SELECT AVG('valor_total_servico') fron os where status_os = 2 and status_financeiro = 1 
+count = utilizada para desenv   = select COUNT (cod_os) from os where  status_os = 2 and status_financeiro = 1
+
+    ALTERAR PALAVRA ERRADA NA TABELA INTEIRA
+
+    UPDATE transacao SET metodo_pagamento = "Cartão de Débito" WHERE metodo_pagamento = "CartÃ£o de DÃ©bito"
+
+
+    ALTERAR PARA INATIVO todos os clinetes do estado do PR
+
+    DEFINIR COMO INATIVO todos os clientes que não tenham CPF 
+
+    ALTERAR PARA CEP "83.880-000" todos os clientes RESIDENTES DE RIO NEGRO
+
+    MUDAR NOME DO PRODUTO PARA "Mouse Game UBS Logitech", preço de compra R$48.90 e preço de venda R$98.90 para id_produto = 7 
+
+    INSERIR UM PRODUTO NOVO com as seguintes descrição "WebCam Full HD C3TECH, código de barras EAN13 789855217577, valor de compra R$ 210,50 e valor de venda R$ 283,50
+
+
+
+
+
+         PROGRAMAÇÃO SQL CONSULTA
+
+    SELECT * FROM cliente
+    SELECT * FROM cliente where uf <>  = “PR”
+    SELECT nome , uf cliente where f <> =  “PR”
+    SELECT nome , uf cliente where f <>  = “MG
+
+
+
+
+     CONSULTAR PESSOA DE 15 A 18 DE ANOS DE IDADE
+ 
+     SELECT nome, data-nascimento FROM 'cliente' where data-nascimento > "2005-04-30" and data_nascimento < "2009-04-03";
+     SELECT nome, data_nascimento FROM cliente where data_nascimento BETWEN "2005-04-30" and "2009-04-03";
+
+
+
+
+    TEM QUE SER MORADORA DE RIO NEGRO
+
+    SELECT nome, data_nascimento , cidade FROM 'cliente' where data_nascimento > "2005-04-30" and data_nascimento < "2009-04-03" and cidade = "Rio Negro";
+
+
+
+
+    FAZER ALTERAÇÕES
+
+    UPDATE cliente SET nome = "João Silva" where nome = "JoÃ£o Silva"
+
+
+
+
+     CLIENTE COM O TELEFONE 1 ESTEJA NULO
+     SELECT * FROM cliente where  telefone1 is null
+     
+
+
+    PROCURAR PESSOAS QUE COMEÇAM COM O NOME ANA
+    SELECT * FROM 'ciente' where nome like "Ana%"
+    SELECT * FROM 'ciente' where nome like "%Ana%"
+
+
+
+
+
+    http://15.228.146.73/phpmyadmin/
+
+
+CREATE TABLE cliente(
+    cod_cliente int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome varchar (90) NOT NULL,
+    cpf char(14) NOT NULL,
+    data_nasc date NOT NULL,
+    genero char(3) NOT NULL,
+    endereco varchar(90) NOT NULL,
+    bairro varchar(90) NOT NULL,
+    cep char (10) NOT NULL,
+    numero varchar (10),
+    complemento varchar(50) NOT NULL,
+    cidade varchar(50) NOT NULL,
+    uf char (2) NOT NULL,
+    email varchar(128) NOT NULL,
+    telefone char (13) NOT NULL,
+    login varchar(128) NOT NULL,
+    senha varchar(64) NOT NULL,
+
+
+    ativo int NOT NULL
+    )ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+
+INSERT INTO cadastro_cliente (`nome_cliente`,`endereco_cliente`,`cpf_cliente`,`telefone_1`,`telefone_2`,`email_cliente`,`ativo`) VALUES
+
+("Noah", "rua fausto pereira volta grande 234", "243.098.659-87", "47992191769", "47992658762", "noah@gmail.com",1)
+    
+
+
+
+INSERT INTO venda_produto(`data_hora_venda`,`valor_total`,`preco_pago`,`forma_pagamento`,`ativo`) VALUES
+
+("2024-04-03 10:15:00", 250.00, 250.00,"DINHEIRO",1),
+
+("2024-04-03 11:15:00", 165.00, 160.00,"DINHERO",1), 
+
+("2024-08-10 15:12:48",15.99, 15.99, "CARTÃO",1),
+
+("2024-09-11 15:25:10",285.50, 285.50, "DINHEIRO",1),
+
+("2024-10-14 19:58:56", 360.80, 360.80, "CARTÃO",1),
+
+("2024-09-15 16:25:25", 1.500.99, 1.500.99, "CARTÃO",1),
+
+("2024-08-16 16:21:00", 65.50, 65.50, "CARTÃO",1),
+
+("2024-06-17 16:25:36", 25,99, 25.99, "CARTÃO",1),
+
+("2024-05-18 17:24:42", 50.99, 50.99, "DINHEIRO",1),
+
+("2024-05-19 10:25:56", 25.00., 25.00, "CARTÃO",1);
+
+
+
+
+
+   
+
+
+                                                                                                              
+
+
+
